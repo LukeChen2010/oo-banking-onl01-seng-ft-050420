@@ -19,8 +19,5 @@ class Transfer
     @sender.deposit(-@amount)
     @receiver.deposit(@amount)
     @status = "complete"
-    
-    return nil
-    
   end
 end
