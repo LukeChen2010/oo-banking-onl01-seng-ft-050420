@@ -16,8 +16,8 @@ class Transfer
     return "Transaction rejected. Please check your account balance." if @sender.balance < @amount
     return nil if @status == "complete"
     
-    sender.deposit(-@amount)
-    receiver.deposit(@amount)
+    @sender.deposit(-@amount)
+    @receiver.deposit(@amount)
     @status = "complete"
     
   end
