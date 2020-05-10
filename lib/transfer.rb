@@ -13,7 +13,7 @@ class Transfer
   end
   
   def execute_transaction
-    return "Transaction rejected. Please check your account balance." if sender.balance < @amount
+    return "Transaction rejected. Please check your account balance." if !sender.valid?
     return nil if @status == "complete"
     
     sender.deposit(-@amount)
