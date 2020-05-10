@@ -20,5 +20,7 @@ class Transfer
     @receiver.deposit(@amount)
     @status = "complete"
     
+    return nil
+    
   end
 end
