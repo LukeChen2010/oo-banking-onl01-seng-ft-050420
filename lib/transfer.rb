@@ -24,4 +24,8 @@ class Transfer
     @receiver.deposit(@amount)
     @status = "complete"
   end
+  
+  def reverse_transfer
+    return nil if @status != "complete"
+  end
 end
